@@ -89,6 +89,62 @@ body {
     position: fixed;
 }
 
+.movable-window {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    /* border-bottom: 1px solid rgba(255,255,255,0.6);
+    border-left: 1px solid rgba(255,255,255,0.6);
+    border-right: 1px solid rgba(255,255,255,0.6); */
+    border-radius: 8px;
+}
+
+.movable-window > bar {
+    display: flex;
+    flex-direction: row;
+    /* position: fixed; */
+    padding-left: 5px;
+    height: 30px;
+    /* border: 1px solid saddlebrown; */
+    background: rgba(255,255,255,0.3);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.movable-window > bar > button {
+    position: relative;
+    margin: 7px 4px;
+    /* top: 5px; */
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(255,255,255, 0.35);
+    border-radius: 50%;
+}
+
+.movable-window > bar > span {
+    position: relative;
+    margin: 7px;
+}
+
+.movable-window > windowBody {
+    display: flex;
+    flex-direction: row;
+    /* position: fixed; */
+    padding-left: 5px;
+    height: 100%;
+    /* border: 1px solid saddlebrown; */
+    background: rgba(255,255,255,0.2);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+#movable-window {
+    display: none;
+}
+
 .dock {
     display: flex;
     flex-direction: row;

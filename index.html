@@ -18,7 +18,7 @@
       </button>
       <button class="topbar-options">Hello</button>
     </div>
-    <div>
+    <div id="mainbox">
       <div class="menu" id="right-menu">
         <ul>
           <li><button>RightMenu0</button></li>
@@ -27,18 +27,21 @@
           <li><button>RightMenu3</button></li>
         </ul>
       </div>
-      <!-- test -->
-      <div class="menu" id="menu">
-        <ul>
-          <li><button>Test 1</button></li>
-          <li><button>Test 2</button></li>
-          <li><button>Test 3</button></li>
-        </ul>
-      </div>
+    <!-- <div class="movable-window" id="movable-window">
+      <bar>
+        <button class="movable-window-operate" style="background: rgba(239,88,89,0.9);"></button>
+        <button class="movable-window-operate" style="background: rgba(115,236,170,0.9);"></button>
+        <span id="windowName">WindowName</span>
+      </bar>
+      <windowBody></windowBody>
+    </div> -->
+    <div id="test" style="display: none">
+      <span></span>
     </div>
     <!-- Dock -->
     <div class="dock">
-      <button class="icon"><img src="./res/img/index/icons/discord.ico" style="height: 85%;"></button>
+      <a class="icon" id="discord" href="#"><img src="./res/img/index/icons/discord.ico" style="height: 85%;">
+      <script type="text/javascript">document.getElementById('discord').onclick = function(){mainbox.appendChild(createWindow(800,600,test,'Discord',true))}</script></a>
     </div>
   </body>
 </html>
