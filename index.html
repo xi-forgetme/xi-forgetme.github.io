@@ -1,47 +1,14 @@
 <html>
-  <head>
-    <meta http-equiv="cache-control" content="max-age=60">
-    <meta http-equiv="keywords" content="">
-    <meta http-equiv="description" content="">
-    <meta name="viewport"content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta charset="utf-8">
-    <script src="./js/index.js"></script>
-    <link rel="stylesheet" href="./css/index.css">
-    <title>^v^ Wanna a cup of coffee ?</title>
-  </head>
-  <body>
-    <div class="topbar">
-      <button onclick="contextMenu()" class="topbar-options" style="width: 20px;">
-        <!-- <img src="./res/img/index/logo.png" style="width: 20px; height: 20px; opacity: 0.9;"> -->
-        <span style="width: 20px; height: 20px; opacity: 0.9;">W</span>
-      </button>
-      <button class="topbar-options">Hello</button>
-    </div>
-    <div id="mainbox">
-      <div class="menu" id="right-menu">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/index.css">
+        <title>Wanderer's Blog</title>
+    </head>
+    <body>
         <ul>
-          <li><button>RightMenu0</button></li>
-          <li><button>RightMenu1</button></li>
-          <li><button>RightMenu2</button></li>
-          <li><button>RightMenu3</button></li>
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#">Library</a></li>
+            <li><form action="search.html"><input type="text"></form></li>
         </ul>
-      </div>
-    <!-- <div class="movable-window" id="movable-window">
-      <bar>
-        <button class="movable-window-operate" style="background: rgba(239,88,89,0.9);"></button>
-        <button class="movable-window-operate" style="background: rgba(115,236,170,0.9);"></button>
-        <span id="windowName">WindowName</span>
-      </bar>
-      <windowBody></windowBody>
-    </div> -->
-    <div id="test" style="display: none">
-      <span></span>
-    </div>
-    <!-- Dock -->
-    <div class="dock">
-      <a class="icon" id="discord" href="#"><img src="./res/img/index/icons/discord.ico" style="height: 85%;">
-      <script type="text/javascript">document.getElementById('discord').onclick = function(){mainbox.appendChild(createWindow(800,600,test,'Discord',true))}</script></a>
-    </div>
-  </body>
+    </body>
 </html>
