@@ -1,6 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <!-- ~Tip: kids_in_wind -->
     </head>
     <body>
@@ -59,7 +61,18 @@
             </div>
             <div class="side-box">
                 <h2>评论</h2>
-                <p>评论区正在建设中……</p>
+                <div id="gitalk-container"></div>
+                <script>
+                    var gitalk = new Gitalk({
+                        clientID: '103017244455e6589d75',
+                        clientSecret: 'b5a57ad58b0d6de61f57c6e50b3f6bdfc5aac770',
+                        repo: 'https://github.com/xi-forgetme/blog_comments.git',
+                        owner: 'xi-forgetme',
+                        admin: ['xi-forgetme'],
+                        id: location.pathname,      // Ensure uniqueness and length less than 50
+                        distractionFreeMode: false  // Facebook-like distraction free mode
+                    })
+                    gitalk.render('gitalk-container')
             </div>
         </div>
     </body>
