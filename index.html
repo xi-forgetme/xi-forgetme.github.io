@@ -19,7 +19,21 @@
                     </ul>
                 </div>
             </div>
-            
+            <div id="container"></div>
+            <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+            <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+            <script>
+                var gitment = new Gitment({
+                id: '页面 ID', // 可选。默认为 location.href
+                owner: 'xi-forgetme',
+                repo: 'https://github.com/xi-forgetme/blog_comments.git',
+                oauth: {
+                    client_id: '7baed31704967b80bd0e',
+                    client_secret: '187ffdff5a2cc0b5ef9a71f0d9dccc0fab26dd9c',
+                },
+                })
+                gitment.render('container')
+            </script>
         </header>
         <div class="secretcode" style="display: none;">
             <p style="font-size: 10px;">U2FsdGVkX18RNGuYYDBMpnXEea+<br>Yk17PH+srO091FdCC9h1<br>n0BhFeDvkvD12lSbM</p>
