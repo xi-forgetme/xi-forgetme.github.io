@@ -169,10 +169,10 @@ html, body {
 
 .side-box {
     position: fixed;
-    top: 300px;
+    top: 130px;
     right: 10%;
     width: 25%;
-    height: 55%;
+    height: 75%;
     color: rgb(88, 90, 92);
     font-family: 等线 Light;
     box-sizing: border-box;
@@ -183,6 +183,7 @@ html, body {
     background: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
     border-radius: 10px;
+    overflow: scroll;
 }
 
 .nav {
