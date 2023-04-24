@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: url(../res/images/background.jpg);
+    background: url(../res/images/background.png);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -67,6 +67,7 @@ html, body {
     height: auto;
     margin-top: 150px;
     margin-left: 10%;
+    margin-bottom: 10px;
     z-index: 4;
 }
 
@@ -123,7 +124,12 @@ html, body {
     overflow: hidden;
 }
 
-.namecard > div{
+.namecard > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    line-height: 10%;
     padding-left: 30px;
 }
 
@@ -263,21 +269,48 @@ li a:hover {
     color: aqua;
 }
 
-code {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* margin-left: 10%; */
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 5%;
+pre {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    box-sizing: border-box;
+    line-height: 100%;
+    white-space: pre;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 20px;
-    padding-right: 10%;
+    padding-right: 20px;
+    background: rgba(0,0,0,0.4);
+    overflow-x: scroll;
+    overflow-y: scroll;
+    counter-reset: line;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+pre > code {
+    width: 100%;
     height: auto;
-    line-height: 40px;
-    border-radius: 10px;
-    width: auto;
-    color: aliceblue;
-    background: rgba(63, 63, 63, 0.7);
-    backdrop-filter: blur(10px);
+    border-radius: 7px;
+    color: rgba(255,255,255,0.9);
+    box-sizing: border-box;
+    line-height: 150%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    counter-increment: line;
+}
+
+pre > code:before {
+    content: counter(line);
+    font-family: "SimHei", "黑体", sans-serif;
+    display: inline-block;
+    width: 1em;
+    border-right: 1px solid rgba(255,255,255,0.9);
+    line-height: 200%;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+    color: rgba(153, 153, 153, 1);
+    text-align: right;
 }
